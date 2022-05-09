@@ -11,15 +11,13 @@ class Building extends React.Component {
     }
 
     componentDidMount(){
-        if (this.counter > 0) {
-            this.map = DG.map(this.mapRef.current, {
-                'center': this.props.data.coordinates,
-                'zoom': 13,
-                'layers': [],
-            })
-            DG.marker(this.props.data.coordinates).addTo(this.map).bindPopup(this.props.data.name)
-        }
-        this.counter ++
+        this.map = DG.map(this.mapRef.current, {
+            'center': this.props.data.coordinates,
+            'zoom': 13,
+            'layers': [],
+        })
+        DG.marker(this.props.data.coordinates).addTo(this.map).bindPopup(this.props.data.name)
+        // this.counter ++
     }
 
     render() {
