@@ -4,7 +4,7 @@ import Footer from './Footer'
 import Building from './Building/Building.js'
 import React from "react";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import {data as data} from '../utils/utils.js'
+import {data} from '../utils/utils.js'
 
 function App() {
   return (
