@@ -14,7 +14,7 @@ function DistinctivesMSU(props) {
           <div className="distinctives__element two" onClick={handlePopup} fact="2"></div>
           <div className="distinctives__element three" onClick={handlePopup} fact="3"></div>
           <div className="distinctives__element four" onClick={handlePopup} fact="4"></div>
-          <img className='distinctives__image' src={image} />
+          <img className='distinctives__image' src={image} alt="МГУ"/>
       </div>
     )
 }

@@ -4,7 +4,6 @@ import Photos from './Photos'
 import Statistics from './Statistics'
 import Distinctives from './Distinctives'
 import { Routes, Route, NavLink } from 'react-router-dom'
-import { animated, useTransition } from 'react-spring'
 import '../../blocks/Building.scss'
 
 function Building(props) {
