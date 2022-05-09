@@ -1,0 +1,107 @@
+.navigation {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+
+    .navigation__element {
+        position: relative;
+        width: calc(100%/7);
+        min-height: 100%;
+        transition: all .3s;
+    }
+
+    .navigation__element_active {
+        width: 100%;
+        pointer-events: none;
+    }
+
+    .navigation__element_inactive {
+        width: 0;
+    }
+
+    .navigation__element_mgu{
+        background: url(../images/buildings/mgu/mgu_1.jpg) center top;
+        background-size: cover;
+    }
+
+    .navigation__element_kotelnicheskaya{
+        background: url(../images/buildings/kotelnicheskaya/kotelnicheskaya_1.jpg) left 47% top;
+        background-size: cover;
+    }
+
+    .navigation__element_mid{
+        background: url(../images/buildings/mid/mid_3.jpg) center top;
+        background-size: cover;
+    }
+
+    .navigation__element_ukr{
+        background: url(../images/buildings/ukr/ukr_1.jpg) right 40% top;
+        background-size: cover;
+    }
+
+    .navigation__element_kudrinskaya{
+        background: url(../images/buildings/kudrinskaya/kudrinskaya_2.jpg) center top;
+        background-size: cover;
+    }
+
+    .navigation__element_vorota{
+        background: url(../images/buildings/vorota/vorota_2.jpg) center top;
+        background-size: cover;
+    }
+
+    .navigation__element_leningradksya{
+        background: url(../images/buildings/leningradksya/leningradksya_1.webp) right 40% top 35%;
+        background-size: cover;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navigation {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    
+        .navigation__element {
+            position: relative;
+            width: 100%;
+            height: calc(100vh/7);
+            transition: all .3s;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    
+        .navigation__element_active {
+            height: 100vh;
+            pointer-events: none;
+        }
+    
+        .navigation__element_inactive {
+            height: 0;
+        }
+
+        .navigation__element_mgu{
+            background-position: center top 30%;
+        }
+    
+        .navigation__element_kotelnicheskaya{
+            background-position: left 47% top 30%;
+        }
+
+        .navigation__element_mid{
+            background-position: center top 30%;
+        }
+
+        .navigation__element_ukr{
+            background-position: center bottom 35%;
+        }
+
+        .navigation__element_kudrinskaya{
+            background-position: center top 40%;
+        }
+
+        .navigation__element_vorota{
+            background-position: center top 40%;
+        }
+    }
+}
