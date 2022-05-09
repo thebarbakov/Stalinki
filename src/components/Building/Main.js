@@ -16,12 +16,8 @@ class Building extends React.Component {
                 'center': this.props.data.coordinates,
                 'zoom': 13,
                 'layers': [],
-                // zoomControl: false,
-                // fullscreenControl: false
-
             })
             DG.marker(this.props.data.coordinates).addTo(this.map).bindPopup(this.props.data.name)
-            DG.popup({maxWidth: 150})
         }
         this.counter ++
     }
