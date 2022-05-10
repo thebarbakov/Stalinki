@@ -30,7 +30,7 @@ function Photos(props) {
             style={{
                 textAlign: "center",
                 maxWidth: "600px",
-                maxHeight: "500px",
+                maxHeight: "450px",
                 margin: "20px auto 5px auto",
             }}
             />
