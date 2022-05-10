@@ -25,10 +25,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    top: 30px;
+    top: 20px;
     left: 0;
     width: 100%;
-    max-height: 100vh;
+    max-height: 99vh;
 
     .building__container {
         position: relative;
@@ -40,7 +40,7 @@
         border-radius: 10px;
         width: 95%;
         max-width: 768px;
-        max-height: 95vh;
+        max-height: 90vh;
     }
 
     .building__button-back{
@@ -389,6 +389,7 @@
 
     .building__photos{
         width: 100%;
+        overflow: scroll;
         animation: opening .5s;
     }
 
