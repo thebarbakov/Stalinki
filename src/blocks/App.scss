@@ -6,11 +6,11 @@
 }
 
 .header_main{
+  width: calc(100% - 30px);
   padding: 20px 0 15px 30px;
   font-size: 36px;
   font-weight: 600;
   color: #000;
-  width: 100%;
   z-index: 999;
   pointer-events: none;
   display: flex;
