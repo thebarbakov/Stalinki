@@ -109,6 +109,11 @@
         left: -10px;
         cursor: pointer;
     }
+    opacity: 1;
+    transition: all .3s;
+    &:hover{
+        opacity: .6;
+    }
 }
 
 .distinctives_msu{
@@ -150,5 +155,169 @@
         .four {
             left: 26%;
         }
+    }
+}
+
+.distinctives_kotel{
+    position: relative;
+    display: flex;
+    animation: opening .5s;
+    
+    .one{
+        position: absolute;
+        bottom: 40%;
+        right: 20%;
+    }
+
+    .two{
+        position: absolute;
+        bottom: 17%;
+        left: 15%;
+    }
+
+    .three {
+        position: absolute;
+        top: 50%;
+        left: 40%;
+    }
+
+    .four {
+        position: absolute;
+        bottom: 9%;
+        right: 16%;
+    }
+
+    @media screen and(min-width: 680px) {
+        .one{
+            right: 25%;
+        }
+
+        .two{
+            position: absolute;
+            left: 17%;
+        }
+    }
+}
+
+.distinctives_mid{
+    position: relative;
+    display: flex;
+    animation: opening .5s;
+    
+    .one{
+        position: absolute;
+        top: 30%;
+        left: 43%;
+    }
+
+    .two{
+        position: absolute;
+        top: 60%;
+        left: 33%;
+    }
+
+    .three {
+        position: absolute;
+        top: 60%;
+        right: 43%;
+    }
+}
+
+.distinctives_ukr{
+    position: relative;
+    display: flex;
+    animation: opening .5s;
+    
+    .one{
+        position: absolute;
+        top: 43%;
+        right: 30%;
+    }
+
+    .two{
+        position: absolute;
+        top: 60%;
+        right: 43%;
+    }
+
+    .three {
+        position: absolute;
+        top: 40%;
+        left: 47%;
+    }
+
+    @media screen and (min-width: 580px) and (max-width: 768px) {
+        .one{
+            position: absolute;
+            top: 43%;
+            right: 35%;
+        }
+        
+    }
+}
+
+.distinctives_kudr{
+    position: relative;
+    display: flex;
+    animation: opening .5s;
+    
+    .one{
+        position: absolute;
+        top: 50%;
+        left: 49%;
+    }
+
+    .two{
+        position: absolute;
+        bottom: 7%;
+        right: 30%;
+    }
+
+    .three {
+        position: absolute;
+        bottom: 7%;
+        left: 30%;
+    }
+
+    .four {
+        position: absolute;
+        bottom: 13%;
+        right: 49%;
+    }
+}
+
+.distinctives_vorota{
+    position: relative;
+    display: flex;
+    animation: opening .5s;
+    
+    .one{
+        position: absolute;
+        bottom: 20%;
+        left: 24%;
+    }
+
+    .two{
+        position: absolute;
+        bottom: 15%;
+        right: 33%;
+    }
+}
+
+.distinctives_lenin{
+    position: relative;
+    display: flex;
+    animation: opening .5s;
+    
+    .one{
+        position: absolute;
+        top: 36%;
+        left: 49%;
+    }
+
+    .two{
+        position: absolute;
+        bottom: 23%;
+        right: 49%;
     }
 }

@@ -11,13 +11,15 @@ class Building extends React.Component {
     }
 
     componentDidMount(){
-        this.map = DG.map(this.mapRef.current, {
-            'center': this.props.data.coordinates,
-            'zoom': 13,
-            'layers': [],
-        })
-        DG.marker(this.props.data.coordinates).addTo(this.map).bindPopup(this.props.data.name)
-        // this.counter ++
+        if (this.counter > 0) {
+            this.map = DG.map(this.mapRef.current, {
+                'center': this.props.data.coordinates,
+                'zoom': 13,
+                'layers': [],
+            })
+            DG.marker(this.props.data.coordinates).addTo(this.map).bindPopup(this.props.data.name)
+        }
+        this.counter ++
     }
 
     render() {
@@ -41,9 +43,24 @@ class Building extends React.Component {
                         <p className='main__text' >{this.description.type}</p>
                     </div>
                 </div>
-                <div className='main__map-block'>
-                    <p className='main__title_map'>Где находится?</p>
-                    <div className='main__map' ref={this.mapRef} id="map" style={{width: '100%', height:250, maxWidth: 600}}></div>
+                <p className='main__title_map'>Где находится?</p>
+                <div className="main__block">
+                    <div className='main__map-block'>
+                        <div className='main__map' ref={this.mapRef} id="map" style={{width: '100%', height:250}}></div>
+                        <a href={`https://yandex.ru/maps/?rtext=${this.props.data.coordinates[0]},${this.props.data.coordinates[1]}&rtt=mt`} className='main__adress'>Построить маршрут до {this.props.data.adress.adress}</a>
+                    </div>
+                    <div className='map-metro'>
+                        <h3 className="map-metro__title">Метро рядом</h3>
+                        <ul className="map-metro__list">
+                            {this.props.data.adress.metro.map((station, i) => (
+                                <li className="map-metro__element" key={i}>
+                                    <div className={`map-metro__line _${station.line}`}>{station.line}</div>
+                                    <p className="map-metro__name">{station.name}</p>
+                                    <p className="map-metro__distance">{station.distance}</p>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
                 </div>
         </div>
         );

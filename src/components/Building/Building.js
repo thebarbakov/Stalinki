@@ -12,13 +12,13 @@ function Building(props) {
       <div className='building'>
           <div className='building__container'>
             <h1 className='building__header'>{props.data.name}</h1>
-            <NavLink to='/'>Back</NavLink>
+            <NavLink className='building__button-back' to='/'></NavLink>
             <div className='building__nav'>
               <NavLink className='building__nav-element' to={'main'}>Главная</NavLink>
               <NavLink className='building__nav-element' to={'info'}>Инфо</NavLink>
               <NavLink className='building__nav-element' to={'photos'}>Фото</NavLink>
               <NavLink className='building__nav-element' to={'statistics'}>Статистика</NavLink>
-              <NavLink className='building__nav-element' to={'distinctives'}>Отличительные детали</NavLink>
+              <NavLink className='building__nav-element' to={'distinctives'}>Детали</NavLink>
             </div>
               <Routes>
                   <Route path={`main`} element={<Main data={props.data}/>}/>

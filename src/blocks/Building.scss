@@ -31,6 +31,7 @@
     max-height: 100vh;
 
     .building__container {
+        position: relative;
         padding: 10px 5px;
         display: flex;
         align-items: center;
@@ -42,8 +43,24 @@
         max-height: 90vh;
     }
 
+    .building__button-back{
+        position: absolute;
+        top: 17px;
+        left: 10px;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        background-image: url(../images/ui/back.png);
+        background-size: contain;
+        transition: all .3s;
+        &:hover{
+            opacity: .5;
+        }
+    }
+
     .building__header{
         font-size: 38px;
+        width: 90%;
         text-align: center;
         margin: 0;
     }
@@ -65,6 +82,7 @@
 
     .building__nav-element{
         justify-content: center;
+        padding-bottom: 10px;
         align-items: center;
         width: calc(100%/5);
         display: flex;
@@ -76,6 +94,11 @@
         padding-left: 0;
         border-bottom: 7px solid rgb(63, 63, 63);
         border-left: none;
+        opacity: 1;
+        transition: all .3s;
+        &:hover{
+            opacity: .5;
+        }
 
     }
 
@@ -117,8 +140,9 @@
         .main__title_map{
             font-size: 20px;
             font-weight: 500;
-            margin: 20px 0 10px 20px;
-            width: 100%;
+            padding: 20px 0 10px 20px;
+            margin: 0;
+            width: calc(100% - 20px );
         }
 
         .main__text{
@@ -127,16 +151,144 @@
         }
 
         .main__map-block{
-            width: 100%;
+            width: 70%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            max-width: 600px;
         }
 
         .main__map{
-            max-width: 600px;
+            width: 100%;
+        }
+
+        .main__adress{
+            font-size: 16px;
+            text-align: center;
+            margin: 10px auto 5px auto;
+            color: black;
+            font-weight: 600;
+            text-decoration: none;
+            opacity: 1;
+            transition: all .3s;
+            &:hover{
+                opacity: .5;
+            }
+        }
+
+        .main__block{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+
+            .map-metro__list {
+                list-style-type: none;
+                display: flex;
+                flex-direction: column;
+                padding: 0;
+                margin: 10px 0 0 10px;
+            }
+
+            .map-metro__element {
+                flex-wrap: wrap;
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                margin: 10px 0 0 0 ;
+                &:first-child{
+                    margin-top: 0;
+                }
+            }
+
+            .map-metro__title {
+                margin: 0;
+                font-weight: 400;
+            }
+
+            .map-metro__line{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                color: white;
+                font-size: 18px;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                font-weight: 600;
+                &._1{
+                    background-color: #EF161E;
+                }
+                &._2{
+                    background-color: #2DBE2C;
+                }
+                &._3{
+                    background-color: #0078BE;
+                }
+                &._4{
+                    background-color: #00BFFF;
+                }
+                &._4A{
+                    background-color: #00BFFF;
+                }
+                &._5{
+                    background-color: #8D5B2D;
+                }
+                &._6{
+                    background-color: #ED9121;
+                }
+                &._7{
+                    background-color: #800080;
+                }
+                &._8{
+                    background-color: #FFD702;
+                }
+                &._8A{
+                    background-color: #FFD702;
+                }
+                &._9{
+                    background-color: #999999;
+                }
+                &._10{
+                    background-color: #99CC00;
+                }
+                &._11{
+                    background-color: #82C0C0;
+                }
+                &._11A{
+                    background-color: #82C0C0;
+                }
+                &._12{
+                    background-color: #A1B3D4;
+                }
+                &._13{
+                    background-color: #9999FF;
+                }
+                &._14{
+                    background-color: #FFFFFF;
+                }
+
+            }
+
+            .map-metro__name{
+                margin: 0 0 0 5px;
+                width: 70%;
+
+            }
+
+            .map-metro__distance{
+                margin: -2px 0 0 37px;
+                display: flex;
+                width: 100%;
+            }
+
+            .map-metro{
+                margin-left: 10px;
+                display: flex;
+                flex-direction: column;
+                width: calc(30% - 10px);
+            }
         }
     }
 
@@ -272,6 +424,31 @@
                 width: calc(30% - 10px);
                 padding-left: 10px;
                 font-weight: 300;
+            }
+
+            .main__block{
+                display: flex;
+                flex-direction: column-reverse;
+
+                .main__map-block{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .map-metro{
+                    display: flex;
+                    margin: 0 0 10px 0;
+                    flex-direction: column;
+                    width: 100%;
+                }
+
+                .map-metro__title {
+                    padding: 10px 0 10px 20px;
+                    font-weight: 400;
+                }
             }
 
         }

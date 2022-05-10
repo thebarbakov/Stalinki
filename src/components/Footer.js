@@ -2,10 +2,13 @@ import React from "react"
 
 function Footer() {
     return (
-      <footer>
-          <p>
+      <footer className="footer">
+          <a href='https://vk.com/thebarbakov' className="footer__text">
             © {new Date().getFullYear()} Yaroslav Barbakov
-          </p>
+          </a>
+          <a href='https://vk.com/jaroslava2004' className="footer__text">
+            info Yaroslava Klimacheva
+          </a>
       </footer>
     );
 }

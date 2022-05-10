@@ -5,6 +5,8 @@ import Building from './Building/Building.js'
 import React from "react";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import {data} from '../utils/utils.js'
+import '../blocks/App.scss'
+import '../blocks/Root.scss'
 
 function App() {
   return (
