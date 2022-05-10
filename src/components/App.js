@@ -1,4 +1,5 @@
 import Header from './Header'
+import { YMInitializer } from 'react-yandex-metrika'
 import Navigation from './Navigation'
 import Footer from './Footer'
 import Building from './Building/Building.js'
@@ -11,6 +12,7 @@ import '../blocks/Root.scss'
 function App() {
   return (
     <div className="App">
+      <YMInitializer accounts={[88740215]} options={{webvisor: true}}/>
       <BrowserRouter>
         <Header />
         <Navigation />
