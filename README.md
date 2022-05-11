@@ -1,6 +1,7 @@
 # Сталинские высотки
 
-===============
+------------------
+
 ![Screenshot](./screenshot.jpg)
 [Ссылка на вeploy](https://stalinki.netlify.app/)
 
