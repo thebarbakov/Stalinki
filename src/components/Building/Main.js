@@ -44,7 +44,7 @@ class Building extends React.Component {
                 <div className="main__block">
                     <div className='main__map-block'>
                         <div className='main__map' ref={this.mapRef} id="map" style={{width: '100%', height:250}}></div>
-                        <a href={`https://yandex.ru/maps/?rtext=${this.props.data.coordinates[0]},${this.props.data.coordinates[1]}&rtt=mt`} className='main__adress'>Построить маршрут до {this.props.data.adress.adress}</a>
+                        <a href={`https://yandex.ru/maps/?rtext=~${this.props.data.coordinates[0]},${this.props.data.coordinates[1]}&rtt=mt`} className='main__adress'>Построить маршрут до {this.props.data.adress.adress}</a>
                     </div>
                     <div className='map-metro'>
                         <h3 className="map-metro__title">Метро рядом</h3>
